@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4ae4f265-a672-439b-93b9-c0bc55a652d1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="51019379-5198-4bd1-a4cd-62626ceea953" />
+  <component name="ProjectId" id="1zDWn3qAEacm5Ixp2L6Z6VQQ46m" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="Multi-X" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="Multi-X" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dileepa Pitawela\PycharmProjects\Multi-X\Hi_MAP\evaluation\pyrouge" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.ht_train_abstractive">
+    <configuration name="ht_train_abstractive" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Multi-X" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Hiersumm/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Hiersumm/src/train_abstractive.py" />
+      <option name="PARAMETERS" value="-mode train -seed 666 -save_checkpoint_steps 5000 -report_every 100 -trunc_tgt_ntoken 400 -trunc_src_nblock 24 -visible_gpus 0 -gpu_ranks 0 -world_size 1 -accum_count 4 -dec_dropout 0.1 -enc_dropout 0.1 -label_smoothing 0.1 -accum_count 4 -inter_layers 6,7 -inter_heads 8 -hier -batch_size 5 -train_steps 10 -data_path input/hier -vocab_path vocab/vocab.model -model_path models/ -log_file log/log.txt -train_from models/model_step_70000.pt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lexrankT" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Multi-X" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Extractive" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Extractive/lexrankT.py" />
+      <option name="PARAMETERS" value="../data_mx/tokTrunc_1024_nonutf/ testX.txt lexrank.out.txt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mmr_summarizer" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Multi-X" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Extractive/mmr" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Extractive/mmr/mmr_summarizer.py" />
+      <option name="PARAMETERS" value="../../data_mx/tokTrunc_1024_nonutf/ testX.txt mmr.out.txt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="nmt_preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Multi-X" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OpenNMT_Baselines" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OpenNMT_Baselines/preprocess.py" />
+      <option name="PARAMETERS" value="-save_data data/newser/OpenNMT-input/newser -src_seq_length 10000 -tgt_seq_length 10000 -src_seq_length_trunc 1024 -tgt_seq_length_trunc 300 -dynamic_dict -share_vocab -max_shard_size 10000000 -train_src data_mn/trainX.txt -train_tgt data_mn/trainY.txt -valid_src data_mn/valX.txt -valid_tgt data_mn/valY.txt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pg" type="PythonConfigurationType" factoryName="Python">
+      <module name="Multi-X" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PointerGeneration" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PointerGeneration/run_summarization.py" />
+      <option name="PARAMETERS" value="--mode=train --data_path=input/train_* --vocab_path=input/vocab --log_root=log/ --exp_name=myexperiment" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="prep" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Multi-X" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Hiersumm/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Hiersumm/src/prep.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="redundancyCalc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Multi-X" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/eval" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eval/redundancyCalc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="relevance" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Multi-X" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/eval" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eval/relevance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="textrankT" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Multi-X" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Extractive" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Extractive/textrankT.py" />
+      <option name="PARAMETERS" value="../data_mx/tokTrunc_1024_nonutf/ testX.txt textrank.out.txt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.textrankT" />
+      <item itemvalue="Python.lexrankT" />
+      <item itemvalue="Python.mmr_summarizer" />
+      <item itemvalue="Python.pg" />
+      <item itemvalue="Python.nmt_preprocess" />
+      <item itemvalue="Python.ht_train_abstractive" />
+      <item itemvalue="Python.relevance" />
+      <item itemvalue="Python.redundancyCalc" />
+      <item itemvalue="Python.prep" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ht_train_abstractive" />
+        <item itemvalue="Python.prep" />
+        <item itemvalue="Python.redundancyCalc" />
+        <item itemvalue="Python.relevance" />
+        <item itemvalue="Python.nmt_preprocess" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4ae4f265-a672-439b-93b9-c0bc55a652d1" name="Default Changelist" comment="" />
+      <created>1633683301231</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633683301231</updated>
+      <workItem from="1633683302568" duration="3823000" />
+      <workItem from="1633695124956" duration="987000" />
+      <workItem from="1633751368429" duration="721000" />
+      <workItem from="1633754173252" duration="6194000" />
+      <workItem from="1633947654827" duration="3720000" />
+      <workItem from="1633951452434" duration="3988000" />
+      <workItem from="1633955503403" duration="577000" />
+      <workItem from="1633956104850" duration="6859000" />
+      <workItem from="1633987520953" duration="15710000" />
+      <workItem from="1634054753518" duration="24128000" />
+      <workItem from="1634112344987" duration="617000" />
+      <workItem from="1634113067875" duration="1565000" />
+      <workItem from="1634114665639" duration="1442000" />
+      <workItem from="1634116220969" duration="50229000" />
+      <workItem from="1634222348744" duration="7129000" />
+      <workItem from="1634235434048" duration="7409000" />
+      <workItem from="1634266607919" duration="4445000" />
+      <workItem from="1634282881830" duration="3727000" />
+      <workItem from="1634664363199" duration="8000" />
+      <workItem from="1634838731505" duration="20285000" />
+      <workItem from="1635183891115" duration="6489000" />
+      <workItem from="1635244661495" duration="25000" />
+      <workItem from="1635261141256" duration="1578000" />
+      <workItem from="1635303878745" duration="83000" />
+      <workItem from="1635477257332" duration="3907000" />
+      <workItem from="1636433722303" duration="55386000" />
+      <workItem from="1636744027991" duration="5141000" />
+      <workItem from="1636915641661" duration="867000" />
+      <workItem from="1643847235822" duration="3341000" />
+      <workItem from="1646107055309" duration="15344000" />
+      <workItem from="1646173839273" duration="6811000" />
+      <workItem from="1646181661892" duration="1350000" />
+      <workItem from="1646183053798" duration="271000" />
+      <workItem from="1646184160122" duration="4386000" />
+      <workItem from="1646188713536" duration="5949000" />
+      <workItem from="1646197748137" duration="4381000" />
+      <workItem from="1646202428936" duration="956000" />
+      <workItem from="1646204050174" duration="1143000" />
+      <workItem from="1646205297971" duration="1211000" />
+      <workItem from="1646206828469" duration="3077000" />
+      <workItem from="1646211106241" duration="3188000" />
+      <workItem from="1646215882127" duration="2468000" />
+      <workItem from="1646220127205" duration="5546000" />
+      <workItem from="1646226758840" duration="5771000" />
+      <workItem from="1646232832189" duration="2257000" />
+      <workItem from="1646268592874" duration="117000" />
+      <workItem from="1646272832475" duration="17233000" />
+      <workItem from="1646384514536" duration="3653000" />
+      <workItem from="1646643079462" duration="6892000" />
+      <workItem from="1646802040430" duration="17339000" />
+      <workItem from="1647150859337" duration="15417000" />
+      <workItem from="1647675499787" duration="3698000" />
+      <workItem from="1647682444183" duration="149000" />
+      <workItem from="1647682608817" duration="312000" />
+      <workItem from="1647683065366" duration="12234000" />
+      <workItem from="1647865112096" duration="5054000" />
+      <workItem from="1647921282050" duration="75762000" />
+      <workItem from="1648880785834" duration="3495000" />
+      <workItem from="1649399828946" duration="1435000" />
+      <workItem from="1649684039581" duration="4485000" />
+      <workItem from="1650264745751" duration="10025000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="436" y="107" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650327652610">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="64" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1303.768@0.0.1303.768" timestamp="1646178622294" />
+    <state x="8" y="84" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1304.768@0.0.1304.768" timestamp="1643852350309" />
+    <state x="436" y="107" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650327652610" />
+    <state x="644" y="330" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1648791047277">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="644" y="330" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1648791047277" />
+    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1646873275690">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1646873275690" />
+    <state x="1039" y="289" key="#xdebugger.evaluate" timestamp="1650328613655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1039" y="289" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1650328613655" />
+    <state width="1452" height="421" key="DebuggerActiveHint" timestamp="1650339819815">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1050" height="438" key="DebuggerActiveHint/0.0.1303.768@0.0.1303.768" timestamp="1646366724283" />
+    <state width="1452" height="421" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1650339819815" />
+    <state x="344" y="110" key="FileChooserDialogImpl" timestamp="1646198284594">
+      <screen x="0" y="0" width="1303" height="768" />
+    </state>
+    <state x="344" y="110" key="FileChooserDialogImpl/0.0.1303.768@0.0.1303.768" timestamp="1646198284594" />
+    <state width="1877" height="172" key="GridCell.Tab.0.bottom" timestamp="1650344122428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1260" height="281" key="GridCell.Tab.0.bottom/0.0.1303.768@0.0.1303.768" timestamp="1646406125824" />
+    <state width="1877" height="172" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
+    <state width="1877" height="172" key="GridCell.Tab.0.center" timestamp="1650344122428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1260" height="281" key="GridCell.Tab.0.center/0.0.1303.768@0.0.1303.768" timestamp="1646406125824" />
+    <state width="1877" height="172" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
+    <state width="1877" height="172" key="GridCell.Tab.0.left" timestamp="1650344122428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1260" height="281" key="GridCell.Tab.0.left/0.0.1303.768@0.0.1303.768" timestamp="1646406125819" />
+    <state width="1877" height="172" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
+    <state width="1877" height="172" key="GridCell.Tab.0.right" timestamp="1650344122428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1260" height="281" key="GridCell.Tab.0.right/0.0.1303.768@0.0.1303.768" timestamp="1646406125824" />
+    <state width="1877" height="172" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
+    <state width="1877" height="172" key="GridCell.Tab.1.bottom" timestamp="1650344122428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1260" height="168" key="GridCell.Tab.1.bottom/0.0.1303.768@0.0.1303.768" timestamp="1646372729344" />
+    <state width="1877" height="172" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
+    <state width="1877" height="172" key="GridCell.Tab.1.center" timestamp="1650344122428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1260" height="168" key="GridCell.Tab.1.center/0.0.1303.768@0.0.1303.768" timestamp="1646372729344" />
+    <state width="1877" height="172" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
+    <state width="1877" height="172" key="GridCell.Tab.1.left" timestamp="1650344122428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1260" height="168" key="GridCell.Tab.1.left/0.0.1303.768@0.0.1303.768" timestamp="1646372729297" />
+    <state width="1877" height="172" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
+    <state width="1877" height="172" key="GridCell.Tab.1.right" timestamp="1650344122428">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1260" height="168" key="GridCell.Tab.1.right/0.0.1303.768@0.0.1303.768" timestamp="1646372729344" />
+    <state width="1877" height="172" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
+    <state x="274" y="31" key="SettingsEditor" timestamp="1646198294537">
+      <screen x="0" y="0" width="1303" height="768" />
+    </state>
+    <state x="274" y="31" key="SettingsEditor/0.0.1303.768@0.0.1303.768" timestamp="1646198294537" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1648787357304">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1648787357304" />
+    <state x="530" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1650265501586">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="360" y="211" key="com.intellij.ide.util.TipDialog/0.0.1303.768@0.0.1303.768" timestamp="1646384514108" />
+    <state x="360" y="211" key="com.intellij.ide.util.TipDialog/0.0.1304.768@0.0.1304.768" timestamp="1643848524030" />
+    <state x="530" y="286" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650265501586" />
+    <state x="1036" y="199" width="835" height="595" key="find.popup" timestamp="1649684637883">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="358" y="140" width="889" height="488" key="find.popup/0.0.1303.768@0.0.1303.768" timestamp="1646119903531" />
+    <state x="1036" y="199" width="835" height="595" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1649684637883" />
+    <state x="463" y="121" width="672" height="678" key="search.everywhere.popup" timestamp="1647865241841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="314" y="89" key="search.everywhere.popup/0.0.1303.768@0.0.1303.768" timestamp="1646278072682" />
+    <state x="463" y="121" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1647865241841" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaluation/Lib/site-packages/pyrouge/Rouge155.py</url>
+          <line>336</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaluation2/Lib/site-packages/pyrouge/Rouge155.py</url>
+          <line>343</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/site-packages/summ_eval/sentence_transformers/SentenceTransformer.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/site-packages/summ_eval/sentence_transformers/SentenceTransformer.py</url>
+          <line>76</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/site-packages/summ_eval/sentence_transformers/SentenceTransformer.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/importlib/_bootstrap.py</url>
+          <line>938</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/site-packages/summ_eval/sentence_transformers/util.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/site-packages/summ_eval/sentence_transformers/SentenceTransformer.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/site-packages/summ_eval/sentence_transformers/SentenceTransformer.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/site-packages/summ_eval/sentence_transformers/util.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/site-packages/summ_eval/sentence_transformers/util.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/importlib/_bootstrap.py</url>
+          <line>988</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/importlib/__init__.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/eval/redundancyCalc.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/eval/redundancyCalc.py</url>
+          <line>201</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/eval/redundancyCalc.py</url>
+          <line>213</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/.conda/envs/evaltoolkit/Lib/site-packages/pyrouge/Rouge155.py</url>
+          <line>342</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Hiersumm/src/abstractive/data_loader.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Hiersumm/src/abstractive/model_builder.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Hiersumm/src/abstractive/optimizer.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Hiersumm/src/abstractive/optimizer.py</url>
+          <line>160</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Hiersumm/src/abstractive/optimizer.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Hiersumm/src/abstractive/optimizer.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Hiersumm/src/abstractive/model_builder.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Multi_X$bertScore__3_.coverage" NAME="bertScore (3) Coverage Results" MODIFIED="1634892374004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/evaluation_mmr/bert_score" />
+    <SUITE FILE_PATH="coverage/Multi_X$rouge2__1_.coverage" NAME="rouge2 (1) Coverage Results" MODIFIED="1634267648399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/evaluation_lex/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$rouge3__1_.coverage" NAME="rouge3 (1) Coverage Results" MODIFIED="1634223338732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/evaluation_mmr/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$rouge_score_ori.coverage" NAME="rouge_score_ori Coverage Results" MODIFIED="1635478139220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenNMT_Baselines/evaluation/ori_tran/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$preprocess.coverage" NAME="nmt_preprocess Coverage Results" MODIFIED="1648694232617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenNMT_Baselines" />
+    <SUITE FILE_PATH="coverage/Multi_X$stats__2_.coverage" NAME="stats (2) Coverage Results" MODIFIED="1646124074699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_mx/multi_news" />
+    <SUITE FILE_PATH="coverage/Multi_X$f2r__1_.coverage" NAME="f2r (1) Coverage Results" MODIFIED="1634881630311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/evaluation_text/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$rouge4.coverage" NAME="rouge4 Coverage Results" MODIFIED="1634194573628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/evaluation_text/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$lexrankT.coverage" NAME="lexrankT Coverage Results" MODIFIED="1634871812192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive" />
+    <SUITE FILE_PATH="coverage/Multi_X$lexTest.coverage" NAME="lexTest Coverage Results" MODIFIED="1634206386108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive" />
+    <SUITE FILE_PATH="coverage/Multi_X$train.coverage" NAME="train Coverage Results" MODIFIED="1633690506351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Hi_MAP" />
+    <SUITE FILE_PATH="coverage/Multi_X$prep.coverage" NAME="prep Coverage Results" MODIFIED="1650327190526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Hiersumm/src" />
+    <SUITE FILE_PATH="coverage/Multi_X$stats__1_.coverage" NAME="stats (1) Coverage Results" MODIFIED="1646120051575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/textR/evaluation_text/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$ht_train_abstractive.coverage" NAME="ht_train_abstractive Coverage Results" MODIFIED="1650342695904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Hiersumm/src" />
+    <SUITE FILE_PATH="coverage/Multi_X$textrankT.coverage" NAME="textrankT Coverage Results" MODIFIED="1634871914372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive" />
+    <SUITE FILE_PATH="coverage/Multi_X$rouge_score_ori__1_.coverage" NAME="rouge_score_ori (1) Coverage Results" MODIFIED="1635185333717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenNMT_Baselines/evaluation/c_tran/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$train_abstractive.coverage" NAME="ht_train_abstractive Coverage Results" MODIFIED="1648797844004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Hiersumm/src" />
+    <SUITE FILE_PATH="coverage/Multi_X$data_split_transformers.coverage" NAME="data_split_transformers Coverage Results" MODIFIED="1635477880096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenNMT_Baselines/evaluation/ori_tran/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$redundancyCalc.coverage" NAME="redundancyCalc Coverage Results" MODIFIED="1648734398010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/eval" />
+    <SUITE FILE_PATH="coverage/Multi_X$lexrank.coverage" NAME="lexrank Coverage Results" MODIFIED="1634115034277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive" />
+    <SUITE FILE_PATH="coverage/Multi_X$f2r__3_.coverage" NAME="f2r (3) Coverage Results" MODIFIED="1634880866829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/evaluation_mmr/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$bertScore__2_.coverage" NAME="bertScore (2) Coverage Results" MODIFIED="1635477674031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenNMT_Baselines/evaluation/ori_tran/bert_score" />
+    <SUITE FILE_PATH="coverage/Multi_X$rouge2.coverage" NAME="rouge2 Coverage Results" MODIFIED="1634267589735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/evaluation_text/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$dataPrep__2_.coverage" NAME="dataPrep (2) Coverage Results" MODIFIED="1647183900817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_mx/multi_news" />
+    <SUITE FILE_PATH="coverage/Multi_X$rouge3.coverage" NAME="rouge3 Coverage Results" MODIFIED="1634227189040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/evaluation_mmr/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$dataPrep__1_.coverage" NAME="dataPrep (1) Coverage Results" MODIFIED="1647154652063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_mx/multi_x" />
+    <SUITE FILE_PATH="coverage/Multi_X$dataPrep_1024_nonutf.coverage" NAME="dataPrep_1024_nonutf Coverage Results" MODIFIED="1634241397253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_mx" />
+    <SUITE FILE_PATH="coverage/Multi_X$rouge.coverage" NAME="rouge Coverage Results" MODIFIED="1634014187983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Hi_MAP/evaluation/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$rouge_score.coverage" NAME="rouge_score Coverage Results" MODIFIED="1634062003786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Hi_MAP/evaluation/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$f2r.coverage" NAME="f2r Coverage Results" MODIFIED="1634880175814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/evaluation_lex/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$bertScore.coverage" NAME="bertScore Coverage Results" MODIFIED="1635186235020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenNMT_Baselines/evaluation/brnn/bert_score" />
+    <SUITE FILE_PATH="coverage/Multi_X$dataPrepConcat.coverage" NAME="dataPrepConcat Coverage Results" MODIFIED="1634240171999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_mx" />
+    <SUITE FILE_PATH="coverage/Multi_X$relevance.coverage" NAME="relevance Coverage Results" MODIFIED="1648722126645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/eval" />
+    <SUITE FILE_PATH="coverage/Multi_X$data_split_transformers__1_.coverage" NAME="data_split_transformers (1) Coverage Results" MODIFIED="1635185241775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenNMT_Baselines/evaluation/c_tran/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$prep__1_.coverage" NAME="prep (1) Coverage Results" MODIFIED="1636640934776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PointerGeneration" />
+    <SUITE FILE_PATH="coverage/Multi_X$himap_preprocess.coverage" NAME="himap_preprocess Coverage Results" MODIFIED="1633754913343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Hi_MAP" />
+    <SUITE FILE_PATH="coverage/Multi_X$eval_metrices.coverage" NAME="eval_metrices Coverage Results" MODIFIED="1648510616278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/eval" />
+    <SUITE FILE_PATH="coverage/Multi_X$stats.coverage" NAME="stats Coverage Results" MODIFIED="1647159550019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_mx/multi_news" />
+    <SUITE FILE_PATH="coverage/Multi_X$dataSplit_pyrouge.coverage" NAME="dataSplit_pyrouge Coverage Results" MODIFIED="1633956285262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Hi_MAP/pyrouge scripts" />
+    <SUITE FILE_PATH="coverage/Multi_X$bertScore__1_.coverage" NAME="bertScore (1) Coverage Results" MODIFIED="1635219670200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenNMT_Baselines/evaluation/c_tran/bert_score" />
+    <SUITE FILE_PATH="coverage/Multi_X$f2r__2_.coverage" NAME="f2r (2) Coverage Results" MODIFIED="1634874922083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Hi_MAP/evaluation/pyrouge" />
+    <SUITE FILE_PATH="coverage/Multi_X$stats__3_.coverage" NAME="stats (3) Coverage Results" MODIFIED="1646123846343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_mx/multi_x" />
+    <SUITE FILE_PATH="coverage/Multi_X$run_summarization.coverage" NAME="run_summarization Coverage Results" MODIFIED="1636637534448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PointerGeneration" />
+    <SUITE FILE_PATH="coverage/Multi_X$dataPrep_nonutf.coverage" NAME="dataPrep_nonutf Coverage Results" MODIFIED="1634270834674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_mx" />
+    <SUITE FILE_PATH="coverage/Multi_X$mmr_summarizer.coverage" NAME="mmr_summarizer Coverage Results" MODIFIED="1634871933494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/mmr" />
+    <SUITE FILE_PATH="coverage/Multi_X$translate.coverage" NAME="translate Coverage Results" MODIFIED="1633690548823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Hi_MAP" />
+    <SUITE FILE_PATH="coverage/Multi_X$dataPrep.coverage" NAME="dataPrep Coverage Results" MODIFIED="1646874084093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PointerGeneration" />
+  </component>
+</project>
