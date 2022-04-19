@@ -1,5 +1,10 @@
 # ignoring folders
-data_mx/
+
 
 # ignoring model files (.pt files)
 *.pt
+
+# ignoring model files (.pt files)
+data_mx/**/*.txt
+data_mx/**/*.gz
+data_mx/**/*.json

@@ -28,6 +28,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="51019379-5198-4bd1-a4cd-62626ceea953" />
   <component name="ProjectId" id="1zDWn3qAEacm5Ixp2L6Z6VQQ46m" />
   <component name="ProjectViewState">
@@ -427,12 +430,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1648787357304" />
-    <state x="530" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1650265501586">
+    <state x="530" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1650353200399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="360" y="211" key="com.intellij.ide.util.TipDialog/0.0.1303.768@0.0.1303.768" timestamp="1646384514108" />
     <state x="360" y="211" key="com.intellij.ide.util.TipDialog/0.0.1304.768@0.0.1304.768" timestamp="1643848524030" />
-    <state x="530" y="286" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650265501586" />
+    <state x="530" y="286" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650353200399" />
     <state x="1036" y="199" width="835" height="595" key="find.popup" timestamp="1649684637883">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
