@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ae4f265-a672-439b-93b9-c0bc55a652d1" name="Default Changelist" comment="" />
+    <list default="true" id="4ae4f265-a672-439b-93b9-c0bc55a652d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/eval/legacy_relevance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eval/redundancy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Multi-X.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Multi-X.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eval/aa.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/eval/aa.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eval/ee.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eval/redundancyCalc.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval/legacy_redundancyCalc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eval/relevance.py" beforeDir="false" afterPath="$PROJECT_DIR$/eval/relevance.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +43,7 @@
   </component>
   <component name="JupyterTrust" id="51019379-5198-4bd1-a4cd-62626ceea953" />
   <component name="ProjectId" id="1zDWn3qAEacm5Ixp2L6Z6VQQ46m" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -57,7 +68,7 @@
       <recent name="C:\Users\Dileepa Pitawela\PycharmProjects\Multi-X\Hi_MAP\evaluation\pyrouge" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ht_train_abstractive">
+  <component name="RunManager" selected="Python.redundancy">
     <configuration name="ht_train_abstractive" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Multi-X" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -73,6 +84,28 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Hiersumm/src/train_abstractive.py" />
       <option name="PARAMETERS" value="-mode train -seed 666 -save_checkpoint_steps 5000 -report_every 100 -trunc_tgt_ntoken 400 -trunc_src_nblock 24 -visible_gpus 0 -gpu_ranks 0 -world_size 1 -accum_count 4 -dec_dropout 0.1 -enc_dropout 0.1 -label_smoothing 0.1 -accum_count 4 -inter_layers 6,7 -inter_heads 8 -hier -batch_size 5 -train_steps 10 -data_path input/hier -vocab_path vocab/vocab.model -model_path models/ -log_file log/log.txt -train_from models/model_step_70000.pt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="legacy_redundancyCalc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Multi-X" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/eval" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\hmkg1\PycharmProjects\Multi-X\eval\legacy_redundancyCalc.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -124,28 +157,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="nmt_preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Multi-X" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OpenNMT_Baselines" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OpenNMT_Baselines/preprocess.py" />
-      <option name="PARAMETERS" value="-save_data data/newser/OpenNMT-input/newser -src_seq_length 10000 -tgt_seq_length 10000 -src_seq_length_trunc 1024 -tgt_seq_length_trunc 300 -dynamic_dict -share_vocab -max_shard_size 10000000 -train_src data_mn/trainX.txt -train_tgt data_mn/trainY.txt -valid_src data_mn/valX.txt -valid_tgt data_mn/valY.txt" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="pg" type="PythonConfigurationType" factoryName="Python">
       <module name="Multi-X" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -190,7 +201,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="redundancyCalc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="redundancy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Multi-X" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -203,7 +214,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eval/redundancyCalc.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eval/redundancy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -261,19 +272,19 @@
       <item itemvalue="Python.lexrankT" />
       <item itemvalue="Python.mmr_summarizer" />
       <item itemvalue="Python.pg" />
-      <item itemvalue="Python.nmt_preprocess" />
       <item itemvalue="Python.ht_train_abstractive" />
-      <item itemvalue="Python.relevance" />
-      <item itemvalue="Python.redundancyCalc" />
       <item itemvalue="Python.prep" />
+      <item itemvalue="Python.legacy_redundancyCalc" />
+      <item itemvalue="Python.redundancy" />
+      <item itemvalue="Python.relevance" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.redundancy" />
+        <item itemvalue="Python.relevance" />
         <item itemvalue="Python.ht_train_abstractive" />
         <item itemvalue="Python.prep" />
-        <item itemvalue="Python.redundancyCalc" />
-        <item itemvalue="Python.relevance" />
-        <item itemvalue="Python.nmt_preprocess" />
+        <item itemvalue="Python.legacy_redundancyCalc" />
       </list>
     </recent_temporary>
   </component>
@@ -348,6 +359,8 @@
       <workItem from="1649399828946" duration="1435000" />
       <workItem from="1649684039581" duration="4485000" />
       <workItem from="1650264745751" duration="10025000" />
+      <workItem from="1650353109602" duration="480000" />
+      <workItem from="1650430208391" duration="3181000" />
     </task>
     <servers />
   </component>
@@ -382,26 +395,26 @@
       <screen x="0" y="0" width="1303" height="768" />
     </state>
     <state x="344" y="110" key="FileChooserDialogImpl/0.0.1303.768@0.0.1303.768" timestamp="1646198284594" />
-    <state width="1877" height="172" key="GridCell.Tab.0.bottom" timestamp="1650344122428">
+    <state width="1877" height="110" key="GridCell.Tab.0.bottom" timestamp="1650503573071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1260" height="281" key="GridCell.Tab.0.bottom/0.0.1303.768@0.0.1303.768" timestamp="1646406125824" />
-    <state width="1877" height="172" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
-    <state width="1877" height="172" key="GridCell.Tab.0.center" timestamp="1650344122428">
+    <state width="1877" height="110" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1650503573071" />
+    <state width="1877" height="110" key="GridCell.Tab.0.center" timestamp="1650503573071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1260" height="281" key="GridCell.Tab.0.center/0.0.1303.768@0.0.1303.768" timestamp="1646406125824" />
-    <state width="1877" height="172" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
-    <state width="1877" height="172" key="GridCell.Tab.0.left" timestamp="1650344122428">
+    <state width="1877" height="110" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1650503573071" />
+    <state width="1877" height="110" key="GridCell.Tab.0.left" timestamp="1650503573071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1260" height="281" key="GridCell.Tab.0.left/0.0.1303.768@0.0.1303.768" timestamp="1646406125819" />
-    <state width="1877" height="172" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
-    <state width="1877" height="172" key="GridCell.Tab.0.right" timestamp="1650344122428">
+    <state width="1877" height="110" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1650503573071" />
+    <state width="1877" height="110" key="GridCell.Tab.0.right" timestamp="1650503573071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1260" height="281" key="GridCell.Tab.0.right/0.0.1303.768@0.0.1303.768" timestamp="1646406125824" />
-    <state width="1877" height="172" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1650344122428" />
+    <state width="1877" height="110" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1650503573071" />
     <state width="1877" height="172" key="GridCell.Tab.1.bottom" timestamp="1650344122428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -430,17 +443,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1648787357304" />
-    <state x="530" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1650353200399">
+    <state x="530" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1650430207621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="360" y="211" key="com.intellij.ide.util.TipDialog/0.0.1303.768@0.0.1303.768" timestamp="1646384514108" />
     <state x="360" y="211" key="com.intellij.ide.util.TipDialog/0.0.1304.768@0.0.1304.768" timestamp="1643848524030" />
-    <state x="530" y="286" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650353200399" />
-    <state x="1036" y="199" width="835" height="595" key="find.popup" timestamp="1649684637883">
+    <state x="530" y="286" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650430207621" />
+    <state x="1036" y="199" width="835" height="595" key="find.popup" timestamp="1650503392799">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="358" y="140" width="889" height="488" key="find.popup/0.0.1303.768@0.0.1303.768" timestamp="1646119903531" />
-    <state x="1036" y="199" width="835" height="595" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1649684637883" />
+    <state x="1036" y="199" width="835" height="595" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1650503392799" />
     <state x="463" y="121" width="672" height="678" key="search.everywhere.popup" timestamp="1647865241841">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -516,17 +529,17 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/eval/redundancyCalc.py</url>
+          <url>file://$PROJECT_DIR$/eval/legacy_redundancyCalc.py</url>
           <line>21</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/eval/redundancyCalc.py</url>
+          <url>file://$PROJECT_DIR$/eval/legacy_redundancyCalc.py</url>
           <line>201</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/eval/redundancyCalc.py</url>
+          <url>file://$PROJECT_DIR$/eval/legacy_redundancyCalc.py</url>
           <line>213</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
@@ -613,7 +626,8 @@
     <SUITE FILE_PATH="coverage/Multi_X$f2r.coverage" NAME="f2r Coverage Results" MODIFIED="1634880175814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Extractive/evaluation_lex/pyrouge" />
     <SUITE FILE_PATH="coverage/Multi_X$bertScore.coverage" NAME="bertScore Coverage Results" MODIFIED="1635186235020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenNMT_Baselines/evaluation/brnn/bert_score" />
     <SUITE FILE_PATH="coverage/Multi_X$dataPrepConcat.coverage" NAME="dataPrepConcat Coverage Results" MODIFIED="1634240171999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_mx" />
-    <SUITE FILE_PATH="coverage/Multi_X$relevance.coverage" NAME="relevance Coverage Results" MODIFIED="1648722126645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/eval" />
+    <SUITE FILE_PATH="coverage/Multi_X$relevance.coverage" NAME="relevance Coverage Results" MODIFIED="1650503537730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/eval" />
+    <SUITE FILE_PATH="coverage/Multi_X$redundancy.coverage" NAME="redundancy Coverage Results" MODIFIED="1650503573071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/eval" />
     <SUITE FILE_PATH="coverage/Multi_X$data_split_transformers__1_.coverage" NAME="data_split_transformers (1) Coverage Results" MODIFIED="1635185241775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OpenNMT_Baselines/evaluation/c_tran/pyrouge" />
     <SUITE FILE_PATH="coverage/Multi_X$prep__1_.coverage" NAME="prep (1) Coverage Results" MODIFIED="1636640934776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PointerGeneration" />
     <SUITE FILE_PATH="coverage/Multi_X$himap_preprocess.coverage" NAME="himap_preprocess Coverage Results" MODIFIED="1633754913343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Hi_MAP" />

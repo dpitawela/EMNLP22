@@ -1,5 +1,5 @@
 # ignoring folders
-
+.idea/
 
 # ignoring model files (.pt files)
 *.pt

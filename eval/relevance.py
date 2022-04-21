@@ -1,78 +1,61 @@
-import re
-import json
-import numpy as np
-from nltk.util import ngrams
+import math
+import nltk
 
-def gram_maker(s):
-    s = s.lower()
-    s = re.sub(r'[^a-zA-Z0-9\s]', ' ', s)
-    tokens = [token for token in s.split(" ") if token != ""]
-    output = list(ngrams(tokens, 2))
-    return output
+class Relevance():
+    def calculateRelevance(self, generatedSummary, goldenSummary, n_gram):
+        semantic_unit_counts_generated = {}
+        semantic_unit_counts_golden = {}
 
-def chunk(in_string,num_chunks):
-    chunk_size = len(in_string)//num_chunks
-    if len(in_string) % num_chunks: chunk_size += 1
-    iterator = iter(in_string)
-    for _ in range(num_chunks):
-        accumulator = list()
-        for _ in range(chunk_size):
-            try: accumulator.append(next(iterator))
-            except StopIteration: break
-        yield ''.join(accumulator)
+        grams_generated = nltk.ngrams(generatedSummary.split(), n_gram)  # splitting to ngrams
+        grams_golden = nltk.ngrams(goldenSummary.split(), n_gram)  # splitting to ngrams
 
-# golden_summary_path = "../data_mx/multi_x/tokTrunc_1024_utf/testY.txt" # multiX
-# golden_summary_path = "../data_mx/multi_x/tokTrunc_1024_utf_nosep/testY.txt" # multiX nosep
+        # counting the frequency of semantic units in generated
+        for gram in grams_generated:
+            if gram in semantic_unit_counts_generated:
+                semantic_unit_counts_generated[gram] += 1
+            else:
+                semantic_unit_counts_generated[gram] = 1
 
-golden_summary_path = "../data_mx/multi_news/tokTrunc_1024_utf/testY.txt" #multi News
-# golden_summary_path = "../data_mx/multi_news/tokTrunc_1024_utf_nosep/testY.txt" #multi News nosep
+        # counting the frequency of semantic units in generated
+        for gram in grams_golden:
+            if gram in semantic_unit_counts_golden:
+                semantic_unit_counts_golden[gram] += 1
+            else:
+                semantic_unit_counts_golden[gram] = 1
 
-generated_summary_path = "../Results/M2 - Impact of special token/Multi N/Tran_ori/test.transformer_ori.out.min_length200"
+        # getting the total number of semantic units
+        n_semantic_units_generated = semantic_unit_counts_generated.keys().__len__()
+        n_semantic_units_golden = semantic_unit_counts_golden.keys().__len__()
 
-# generated summaries
-with open(generated_summary_path, "r", encoding='utf-8') as f:
-    generated = [line.strip()[2:] for line in f]  # removing the dash in the beginning and making the list
+        relevance = 0  # initialising relevance for the current summary
+        for (unit_gen, count_gen) in semantic_unit_counts_generated.items():
 
-# golden summaries
-with open(golden_summary_path, "r", encoding='utf-8') as f:
-    golden = [line.strip()[2:] for line in f]  # removing the dash in the beginning and making the list
+            prob_gen = (count_gen / n_semantic_units_generated)
+            prob_gold = ((semantic_unit_counts_golden[
+                              unit_gen] if unit_gen in semantic_unit_counts_golden else 0) / n_semantic_units_golden)
 
-fromFirstSegment = []
-fromSecondSegment = []
-fromThirdSegment = []
+            if prob_gen != 0 and prob_gold != 0:
+                relevance += (prob_gen * math.log(prob_gold, 2))
+            else:
+                relevance += 0
 
-for source_topic, reference in zip(golden, generated):
-    # Counting ngrams presence in various segments.
-    one = 0
-    two = 0
-    three = 0
-    counter_tot = 0
+        return relevance
 
-    a,b,c = list(chunk(source_topic.lower(),3))
-    grams = gram_maker(reference)
-    for elem in grams:
-        if ' '.join(list(elem)) in a:
-            one += 1
-        elif ' '.join(list(elem)) in b:
-            two += 1
-        elif ' '.join(list(elem)) in c:
-            three += 1
-    counter_tot += len(grams)
 
-    fromFirstSegment.append(one/counter_tot)
-    fromSecondSegment.append(two/counter_tot)
-    fromThirdSegment.append(three/counter_tot)
+    def evaluateBatch(self, generated, golden):
+        n_gram = 1  # set the semantic unit length
+        relevance = 0  # initialising relevance for the whole test set
+        for generatedSummary, goldenSummary in zip(generated, golden):
+            # adding relevance calculated for a single example into the total relevance
+            relevance += self.calculateRelevance(generatedSummary=generatedSummary, goldenSummary=goldenSummary,
+                                            n_gram=n_gram)
 
-relevance = {'content_from_first_segment': np.mean(fromFirstSegment), 'content_from_second_segment': np.mean(fromSecondSegment), 'content_from_third_segment': np.mean(fromThirdSegment)}
+        return {'relevance': relevance}
 
-json_name = 'oriT_mn.json'
-# reading the results json
-with open(json_name, 'r') as file:
-    results_dict = json.load(file)
+# generated = ['entropy interprets the degree of maximum coverage']
+generated = ['The core idea The core idea The core idea The core idea The core idea The core idea']
+# golden = ['The core idea The core idea The core idea The core idea The core idea The core idea']
+golden = ['The By definition entropy encompasses the notion of maximum coverage.']
 
-results_dict['relevance'] = relevance
-print(results_dict)
-
-# writing to the results json
-with open(json_name, 'w') as file:
-    json.dump(results_dict, file)
+rel = Relevance()
+print(rel.evaluateBatch(generated, golden))
