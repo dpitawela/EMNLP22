@@ -5,7 +5,9 @@ Acknowledgement --->    [https://github.com/Alex-Fabbri/Multi-News/tree/master/c
 
 ## Transformer
 Acknowledgement ---> [https://github.com/Alex-Fabbri/Multi-News/tree/master/code](https://github.com/Alex-Fabbri/Multi-News/tree/master/code)
+
 Located in ---> OpenNMT_Baselines
+
 **To train:**
 
     python train.py -data/newser/OpenNMT-input/newser -word_vec_size 512 -rnn_size 512 -layers 4 -encoder_type transformer 
@@ -27,7 +29,9 @@ Located in ---> OpenNMT_Baselines
 
 ## Copy-Transformer
 Acknowledgement ---> [https://github.com/Alex-Fabbri/Multi-News/tree/master/code](https://github.com/Alex-Fabbri/Multi-News/tree/master/code)
+
 Located in ---> OpenNMT_Baselines
+
 **To Train**
 
     python train.py -save_model models/newser-transformer/newser -data data/newser/OpenNMT-input/newser -copy_attn
