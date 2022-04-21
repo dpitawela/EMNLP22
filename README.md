@@ -4,9 +4,10 @@ Acknowledgement --->    [https://github.com/Alex-Fabbri/Multi-News/tree/master/c
 
 
 ## Transformer
-Acknowledgement ---> [https://github.com/Alex-Fabbri/Multi-News/tree/master/code](https://github.com/Alex-Fabbri/Multi-News/tree/master/code)
 
-Located in ---> OpenNMT_Baselines
+ - Acknowledgement ---> [https://github.com/Alex-Fabbri/Multi-News/tree/master/code/OpenNMT-py-baselines](https://github.com/Alex-Fabbri/Multi-News/tree/master/code/OpenNMT-py-baselines)
+- Located in ---> OpenNMT_Baselines
+- Change the input, output, model paths according to your directory structure
 
 **To train:**
 
@@ -24,13 +25,11 @@ Located in ---> OpenNMT_Baselines
     -ignore_when_blocking "." "</t>" "<t>" "story_separator_special_tag" -src data_mx/testX.txt 
     -min_length 110
 
-
-
-
 ## Copy-Transformer
-Acknowledgement ---> [https://github.com/Alex-Fabbri/Multi-News/tree/master/code](https://github.com/Alex-Fabbri/Multi-News/tree/master/code)
 
-Located in ---> OpenNMT_Baselines
+ - Acknowledgement ---> [https://github.com/Alex-Fabbri/Multi-News/tree/master/code/OpenNMT-py-baselines](https://github.com/Alex-Fabbri/Multi-News/tree/master/code/OpenNMT-py-baselines)
+- Located in ---> OpenNMT_Baselines
+- Change the input, output, model paths according to your directory structure
 
 **To Train**
 
@@ -48,3 +47,4 @@ Located in ---> OpenNMT_Baselines
     -stepwise_penalty -coverage_penalty summary -beta 5 -length_penalty wu -alpha 0.9 -block_ngram_repeat 3
     -ignore_when_blocking "." "</t>" "<t>" "story_separator_special_tag" -src data_mx/testX.txt
     -min_length 110
+* Change the input, output, model paths according to your directory structure
