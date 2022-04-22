@@ -1,5 +1,6 @@
 import math
 import nltk
+import numpy as np
 
 class Relevance():
     def calculateRelevance(self, generatedSummary, goldenSummary, n_gram):
@@ -44,16 +45,16 @@ class Relevance():
 
     def evaluateBatch(self, generated, golden):
         n_gram = 1  # set the semantic unit length
-        relevance = 0  # initialising relevance for the whole test set
+        relevance = []  # initialising relevance for the whole test set
         for generatedSummary, goldenSummary in zip(generated, golden):
             # adding relevance calculated for a single example into the total relevance
-            relevance += self.calculateRelevance(generatedSummary=generatedSummary, goldenSummary=goldenSummary,
-                                            n_gram=n_gram)
+            relevance.append(self.calculateRelevance(generatedSummary=generatedSummary, goldenSummary=goldenSummary,
+                                            n_gram=n_gram))
 
-        return {'relevance': relevance}
+        return {'relevance':  np.mean(relevance)}
 
-# generated = ['entropy interprets the degree of maximum coverage']
-generated = ['The core idea The core idea The core idea The core idea The core idea The core idea']
+generated = ['The By definition entropy encompasses the notion of maximum coverage.']
+# generated = ['The core idea The core idea The core idea The core idea The core idea The core idea']
 # golden = ['The core idea The core idea The core idea The core idea The core idea The core idea']
 golden = ['The By definition entropy encompasses the notion of maximum coverage.']
 

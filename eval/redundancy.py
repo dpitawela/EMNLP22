@@ -1,5 +1,6 @@
 import math
 import nltk
+import numpy as np
 
 class Redundancy():
     # for summary in generated:
@@ -25,19 +26,16 @@ class Redundancy():
 
     def evaluateBatch(self, generatedSummaries):
         n_gram = 1  # set the semantic unit length
-        redundancy = 0  # initialising redundancy for the whole test set
+        redundancy = []  # initialising redundancy for the whole test set
 
         for summary in generatedSummaries:
             # adding redundancy calculated for a single example into the total redundancy
-            redundancy += self.calculateRedundancy(summary=summary, n_gram=n_gram)
+            redundancy.append(self.calculateRedundancy(summary=summary, n_gram=n_gram))
 
-        return {'redundancy': redundancy}
+        return {'redundancy': np.mean(redundancy)}
 
 
-# generated = ['entropy interprets the degree of maximum coverage']
 generated = ['The core idea The core idea The core idea The core idea The core idea The core idea']
-# golden = ['The core idea The core idea The core idea The core idea The core idea The core idea']
-golden = ['The By definition entropy encompasses the notion of maximum coverage.']
 
 red = Redundancy()
 print(red.evaluateBatch(generated))
