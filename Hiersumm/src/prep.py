@@ -7,7 +7,7 @@ import glob
 from tensorflow.core.example import example_pb2
 import sentencepiece as spm
 
-VOCAB_SIZE = 54874
+VOCAB_SIZE = 1288 #54874
 dir = "../../data_mx/multi_x/tokTrunc_1024_utf/"
 vocab_counter = collections.Counter()
 forVocab = []
@@ -25,26 +25,12 @@ def createBinFiles():
 
             data = []
 
-            for src, tgt in zip(srcLines, tgtLines):
+            for src, tgt in zip(srcLines[:5], tgtLines[:5]):
                 srcLine = src.encode(encoding='utf-8')
                 tgtLine = tgt.encode(encoding='utf-8')
 
                 forVocab.append(srcLine)
                 forVocab.append(tgtLine)
-
-                # tf_example = example_pb2.Example()
-                # tf_example.features.feature['src'].bytes_list.value.extend([srcLine])  # (source) abstracts of papaers
-                # tf_example.features.feature['tgt'].bytes_list.value.extend([tgtLine])  # (target) related work section
-                #
-                # tf_example_str = tf_example.SerializeToString()
-                # str_len = len(tf_example_str)
-                # srctgt.write(struct.pack('q', str_len))
-                # srctgt.write(struct.pack('%ds' % str_len, tf_example_str))
-                #
-                # # # creating PT files
-                # tf_example_str_lst.append(tf_example_str)
-                # torch.save(tf_example_str, buffer)
-                # torch.save(tf_example_str_lst, "input/" + "xx." +fname + ".pt")
 
                 data.append({'src':srcLine, 'tgt':tgtLine})
             n = 2000
