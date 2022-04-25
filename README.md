@@ -48,3 +48,7 @@ Acknowledgement --->    [https://github.com/Alex-Fabbri/Multi-News/tree/master/c
     -ignore_when_blocking "." "</t>" "<t>" "story_separator_special_tag" -src data_mx/testX.txt
     -min_length 110
 * Change the input, output, model paths according to your directory structure
+
+## Hierarchical Transformer
+
+ - Acknowledgement ---> https://github.com/nlpyang/hiersumm
