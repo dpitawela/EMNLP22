@@ -66,6 +66,13 @@ def load_dataset(args, corpus_type, shuffle, spm):
     """
     assert corpus_type in ["train", "valid", "test"]
 
+    # def _lazy_dataset_loader(pt_file, corpus_type):
+    #     dataset = torch.load(pt_file)
+    #     logger.info('Loading %s dataset from %s, number of examples: %d' %
+    #                 (corpus_type, pt_file, len(dataset)))
+    #     return dataset
+
+
     def _lazy_dataset_loader(pt_file, corpus_type):
         dataset = torch.load(pt_file)
         logger.info('Loading %s dataset from %s, number of examples: %d' %
@@ -77,7 +84,8 @@ def load_dataset(args, corpus_type, shuffle, spm):
             data_point = {}
             data_point['src'] = []
             # doc = ' '.join(item['src'])
-            data_point['src'].append(spm.encode(item['src'].lower()))
+            [data_point['src'].append(spm.encode(doc.lower())) for doc in item['src']]
+            # data_point['src'].append(spm.encode(item['src'].lower()))
 
             # todo: deal with special tokens
             summary = item['tgt'] #' '.join(item['tgt'])
@@ -90,7 +98,6 @@ def load_dataset(args, corpus_type, shuffle, spm):
             data_point['cosine'] = None
             data_point['ner_graph'] = None
             dataset_processed.append(data_point)
-
 
         return dataset_processed
 

@@ -4,7 +4,7 @@ import torch
 import io
 import gc
 import glob
-from tensorflow.core.example import example_pb2
+# from tensorflow.core.example import example_pb2
 import sentencepiece as spm
 
 VOCAB_SIZE = 1288 #54874
@@ -26,13 +26,11 @@ def createBinFiles():
             data = []
 
             for src, tgt in zip(srcLines[:5], tgtLines[:5]):
-                srcLine = src.encode(encoding='utf-8')
-                tgtLine = tgt.encode(encoding='utf-8')
+                forVocab.append(src)
+                forVocab.append(tgt)
 
-                forVocab.append(srcLine)
-                forVocab.append(tgtLine)
-
-                data.append({'src':srcLine, 'tgt':tgtLine})
+                src = src.split('story_separator_special_tag ')
+                data.append({'src':src, 'tgt':tgt})
             n = 2000
             fname = 'valid' if fname == 'val' else fname
             [torch.save(data[i:i + n], "input/" + "hier." + fname + "." + str(j+1) + ".pt") for j, i in enumerate(range(0, len(data), n))]
