@@ -97,6 +97,7 @@ def train(args,device_id):
 
     if device_id >= 0:
         torch.cuda.set_device(device_id)
+        torch.cuda.empty_cache()
         torch.cuda.manual_seed(args.seed)
 
     if args.train_from != '':

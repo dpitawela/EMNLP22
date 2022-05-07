@@ -7,8 +7,8 @@ import glob
 # from tensorflow.core.example import example_pb2
 import sentencepiece as spm
 
-VOCAB_SIZE = 1288 #54874
-dir = "../../data_mx/multi_x/tokTrunc_1024_utf/"
+VOCAB_SIZE = 87902 # news:87902 # science:54874
+dir = "../../data_mx/multi_news/tokTrunc_1024_utf_nosep/"
 vocab_counter = collections.Counter()
 forVocab = []
 tf_example_str_lst = []
@@ -25,7 +25,7 @@ def createBinFiles():
 
             data = []
 
-            for src, tgt in zip(srcLines[:5], tgtLines[:5]):
+            for src, tgt in zip(srcLines, tgtLines):
                 forVocab.append(src)
                 forVocab.append(tgt)
 
@@ -41,28 +41,5 @@ def createSentPiece():
                                    user_defined_symbols=['story_separator_special_tag'])
 
 
-def createPTFiles():
-    text = ["hello hello hello", "hellohellohello hello"]
-    torch.save(text, "input/train2.pt")
-
-    # buffer = io.BytesIO()
-    # torch.save("hello", buffer)
-    # torch.save(buffer, "input/train.pt")
-
-
 createBinFiles()
 createSentPiece()
-# createPTFiles()
-
-#             # creating the vocabulary
-#             art_tokens = src.split(' ')
-#             abs_tokens = tgt.split(' ')
-#             tokens = art_tokens + abs_tokens
-#             tokens = [t.strip() for t in tokens]  # strip
-#             tokens = [t for t in tokens if t != ""]  # remove empty
-#             vocab_counter.update(tokens)
-#
-# print("Writing vocab file...")
-# with open("vocab", 'w', encoding='utf-8') as writer:
-#     for word, count in vocab_counter.most_common(VOCAB_SIZE):
-#         writer.write(word + ' ' + str(count) + '\n')
