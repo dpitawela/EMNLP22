@@ -144,7 +144,7 @@ class Translator(object):
                 for trans in translations:
                     pred, gold, src = trans
                     pred.insert(0, '-')
-                    gold = [tok.decode('utf-8') for tok in gold]
+                    # gold = [tok.decode('utf-8') for tok in gold]
                     pred_str = ' '.join(pred).replace('<Q>', ' ').replace(r' +', ' ').replace('<unk>', 'UNK').strip()
                     gold_str = ' '.join(gold).replace('<t>', '').replace('</t>', '').replace('<Q>', ' ').replace(r' +',
                                                                                                                  ' ').strip()
