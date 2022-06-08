@@ -5,6 +5,7 @@ Implementation of "Attention is All You Need"
 import torch
 import torch.nn as nn
 import numpy as np
+import pickle
 
 from abstractive.attn import MultiHeadedAttention
 from abstractive.neural import PositionwiseFeedForward
@@ -111,6 +112,22 @@ class TransformerDecoderLayer(nn.Module):
                                       mask=src_pad_mask,
                                       layer_cache=layer_cache,
                                       type="context")
+        #-------------------------------------------------------------------
+
+        # try:
+        #     with open("att/ATTENTION", "rb") as fp:  # Unpickling
+        #         b = pickle.load(fp)
+        #         vis_map = mid[:, :].detach().cpu().numpy()
+        #         b.append(vis_map)
+        #     with open("att/ATTENTION", "wb") as fp:
+        #         pickle.dump(b, fp)
+        # except (OSError, IOError) as e:
+        #     with open("att/ATTENTION", "wb") as fp:  # Pickling
+        #         vis_map = mid[:, :].detach().cpu().numpy()
+        #         pickle.dump([vis_map], fp)
+
+        #-------------------------------------------------------------------
+
         output = self.feed_forward(self.drop(mid) + query)
 
         return output, all_input

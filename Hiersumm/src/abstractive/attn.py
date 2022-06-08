@@ -2,7 +2,7 @@
 import math
 import torch
 import torch.nn as nn
-
+import pickle
 
 
 class MultiHeadedAttention(nn.Module):
@@ -184,6 +184,22 @@ class MultiHeadedAttention(nn.Module):
         # 3) Apply attention dropout and compute context vectors.
 
         attn = self.softmax(scores)
+        # --------------------------------------------------------
+        if type == "context":
+            try:
+                with open("att/ATTENTION", "rb") as fp:  # Unpickling
+                    b = pickle.load(fp)
+                    vis_map = attn[:, :, :, :].detach().cpu().numpy()
+                    b.append(vis_map)
+                with open("att/ATTENTION", "wb") as fp:
+                    pickle.dump(b, fp)
+            except (OSError, IOError) as e:
+                with open("att/ATTENTION", "wb") as fp:  # Pickling
+                    vis_map = attn[:, :, :, :].detach().cpu().numpy()
+                    pickle.dump([vis_map], fp)
+        # --------------------------------------------------------
+
+
 
 
         drop_attn = self.dropout(attn)

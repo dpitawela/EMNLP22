@@ -1,6 +1,7 @@
 import math
 import nltk
 import numpy as np
+import json
 
 class Relevance():
     def calculateRelevance(self, generatedSummary, goldenSummary, n_gram):
@@ -53,10 +54,37 @@ class Relevance():
 
         return {'relevance':  np.mean(relevance)}
 
-generated = ['The By definition entropy encompasses the notion of maximum coverage.']
+# generated = ['The By definition', ' yo yo']
 # generated = ['The core idea The core idea The core idea The core idea The core idea The core idea']
 # golden = ['The core idea The core idea The core idea The core idea The core idea The core idea']
-golden = ['The By definition entropy encompasses the notion of maximum coverage.']
+# golden = ['rock The hard']
+# rel = Relevance()
+# print(rel.evaluateBatch(generated, golden))
 
-rel = Relevance()
-print(rel.evaluateBatch(generated, golden))
+# --------------------------------------------------------------------------------------------------------------
+# # golden_summary_path = "../data_mx/multi_x/tokTrunc_1024_utf/testY.txt" # multiX
+# # golden_summary_path = "../data_mx/multi_x/tokTrunc_1024_utf_nosep/testY.txt" # multiX nosep
+# # golden_summary_path = "../data_mx/multi_news/tokTrunc_1024_utf/testY.txt" #multi News
+# golden_summary_path = "../data_mx/multi_news/tokTrunc_1024_utf_nosep/testY.txt" #multi News nosep
+#
+# generated_summary_path = "../Results/M2 - Impact of special token/Multi N/Copy T_nosep/test.transformer.out.min_length200"
+#
+# # generated summaries
+# with open(generated_summary_path, "r", encoding='utf-8') as f:
+#     generated = [line.strip()[2:] for line in f]  # removing the dash in the beginning and making the list
+#
+# # golden summaries
+# with open(golden_summary_path, "r", encoding='utf-8') as f:
+#     golden = [line.strip()[2:] for line in f]  # removing the dash in the beginning and making the list
+#
+# json_name = 'copyT_mn_nosep.json'
+# # reading the results json
+# with open(json_name, 'r') as file:
+#     results_dict = json.load(file)
+#
+# results_dict['relevance'] = Relevance().evaluateBatch(generated=generated, golden=golden)
+# print(results_dict)
+#
+# # writing to the results json
+# with open(json_name, 'w') as file:
+#     json.dump(results_dict, file)
