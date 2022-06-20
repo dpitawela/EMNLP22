@@ -26,8 +26,8 @@ class Relevance():
                 semantic_unit_counts_golden[gram] = 1
 
         # getting the total number of semantic units
-        n_semantic_units_generated = semantic_unit_counts_generated.keys().__len__()
-        n_semantic_units_golden = semantic_unit_counts_golden.keys().__len__()
+        n_semantic_units_golden = sum([v for k, v in semantic_unit_counts_golden.items()])
+        n_semantic_units_generated = sum([v for k, v in semantic_unit_counts_generated.items()])
 
         relevance = 0  # initialising relevance for the current summary
         for (unit_gen, count_gen) in semantic_unit_counts_generated.items():
@@ -40,8 +40,7 @@ class Relevance():
                 relevance += (prob_gen * math.log(prob_gold, 2))
             else:
                 relevance += 0
-
-        return relevance
+        return -relevance
 
 
     def evaluateBatch(self, generated, golden):
@@ -55,11 +54,11 @@ class Relevance():
         return {'relevance':  np.mean(relevance)}
 
 # generated = ['The By definition', ' yo yo']
-# generated = ['The core idea The core idea The core idea The core idea The core idea The core idea']
-# golden = ['The core idea The core idea The core idea The core idea The core idea The core idea']
+# generated = ['The core idea is return {relevance:  np.mean(relevance)}']
+# golden = ['The core idea is not mine']
 # golden = ['rock The hard']
 # rel = Relevance()
-# print(rel.evaluateBatch(generated, golden))
+# print(Relevance().evaluateBatch(generated, golden))
 
 # --------------------------------------------------------------------------------------------------------------
 # # golden_summary_path = "../data_mx/multi_x/tokTrunc_1024_utf/testY.txt" # multiX
