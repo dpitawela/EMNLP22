@@ -49,6 +49,8 @@
  - Acknowledgement ---> [https://github.com/nlpyang/hiersumm](https://github.com/nlpyang/hiersumm)
  - Located in ---> Hiersumm
  - The below codes are for sentence level HT. Change -trunc_src_nblock to 24 for paragraph level training along with a paragraph level dataset and increase the batch size according to the GPU capacity.
+ - Use Hiersumm/src/prep.py file to create .pt data files and .vocab sentencepiece vocabulary files
+ - Refer requirementspip.yml file in Hiersumm/src/ to identify python, pytorch versions required
  - Change the model paths, data path, vocab path, log file path, result path according to your directory structure
  
 **To Train**
@@ -70,4 +72,4 @@
     -test_from $path"models/model_step_50000.pt" -result_path $path"output/out" 
     
  ## HiMap
-Acknowledgement --->    [https://github.com/Alex-Fabbri/Multi-News/tree/master/code](https://github.com/Alex-Fabbri/Multi-News/tree/master/code)
+Acknowledgement ---> [https://github.com/Alex-Fabbri/Multi-News/tree/master/code](https://github.com/Alex-Fabbri/Multi-News/tree/master/code)
