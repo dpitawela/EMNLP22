@@ -1,11 +1,3 @@
-
-
-
-
-## HiMap
-Acknowledgement --->    [https://github.com/Alex-Fabbri/Multi-News/tree/master/code](https://github.com/Alex-Fabbri/Multi-News/tree/master/code)  
-
-
 ## Transformer
 
  - Acknowledgement ---> [https://github.com/Alex-Fabbri/Multi-News/tree/master/code/OpenNMT-py-baselines](https://github.com/Alex-Fabbri/Multi-News/tree/master/code/OpenNMT-py-baselines)
@@ -76,3 +68,6 @@ Acknowledgement --->    [https://github.com/Alex-Fabbri/Multi-News/tree/master/c
     -dataset test -alpha 0.4 -max_length 300 -data_path $path"input/hier" -vocab_path $path"vocab/vocab.model" 
     -model_path $path"models/" -log_file $path"log/log.txt" -trunc_tgt_ntoken 300 -enc_dropout 0 -beam_size 5 
     -test_from $path"models/model_step_50000.pt" -result_path $path"output/out" 
+    
+ ## HiMap
+Acknowledgement --->    [https://github.com/Alex-Fabbri/Multi-News/tree/master/code](https://github.com/Alex-Fabbri/Multi-News/tree/master/code)
