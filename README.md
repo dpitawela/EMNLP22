@@ -1,4 +1,7 @@
 
+
+
+
 ## HiMap
 Acknowledgement --->    [https://github.com/Alex-Fabbri/Multi-News/tree/master/code](https://github.com/Alex-Fabbri/Multi-News/tree/master/code)  
 
@@ -47,8 +50,29 @@ Acknowledgement --->    [https://github.com/Alex-Fabbri/Multi-News/tree/master/c
     -stepwise_penalty -coverage_penalty summary -beta 5 -length_penalty wu -alpha 0.9 -block_ngram_repeat 3
     -ignore_when_blocking "." "</t>" "<t>" "story_separator_special_tag" -src data_mx/testX.txt
     -min_length 110
-* Change the input, output, model paths according to your directory structure
+
 
 ## Hierarchical Transformer
 
- - Acknowledgement ---> https://github.com/nlpyang/hiersumm
+ - Acknowledgement ---> [https://github.com/nlpyang/hiersumm](https://github.com/nlpyang/hiersumm)
+ - Located in ---> Hiersumm
+ - The below codes are for sentence level HT. Change -trunc_src_nblock to 24 for paragraph level training along with a paragraph level dataset and increase the batch size according to the GPU capacity.
+ - Change the model paths, data path, vocab path, log file path, result path according to your directory structure
+ 
+**To Train**
+
+    python $path"train_abstractive.py" -mode train -batch_size 128 -seed 666 -train_steps 100000 -save_checkpoint_steps 5000 
+    -report_every 100 -trunc_src_nblock 250 -visible_gpus 0 -gpu_ranks 0 -accum_count 4 -dec_dropout 0.1 
+    -enc_dropout 0.1 -label_smoothing 0.1 -accum_count 4 -inter_layers 6,7 -inter_heads 8 -hier -world_size 1 
+    -data_path $path"input/hier" -vocab_path $path"vocab/vocab.model" -model_path $path"models/" -log_file $path"log/log.txt" 
+    -trunc_tgt_ntoken 300
+    
+    #-train_from $path"models/model_step_50000.pt"
+
+**To Inference**
+
+    python $path"train_abstractive.py" -mode test -batch_size 32 -valid_batch_size 4096 -seed 666 -trunc_src_nblock 24 
+    -visible_gpus 0 -gpu_ranks 0 -inter_layers 6,7 -inter_heads 8 -hier -max_wiki 100000
+    -dataset test -alpha 0.4 -max_length 300 -data_path $path"input/hier" -vocab_path $path"vocab/vocab.model" 
+    -model_path $path"models/" -log_file $path"log/log.txt" -trunc_tgt_ntoken 300 -enc_dropout 0 -beam_size 5 
+    -test_from $path"models/model_step_50000.pt" -result_path $path"output/out" 
